@@ -1,0 +1,17 @@
+[package]
+name = "tldr-rust"
+version = "0.1.0"
+edition = "2024"
+description = "A fast tldr pages client in rust"
+authors = ["lamore44 - jely"]
+
+
+[[bin]]
+name = "tldr-rust"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"]} # CLI args
+reqwest = { version = "0.12", features = ["blocking"]} # HTTP (vlocking = simpler for beginners)
+colored = "2" #terminal colors
+dirs = "5" # Find home dir for cache
