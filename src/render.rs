@@ -29,7 +29,7 @@ fn print_line(line: &str){
     }
 
     //explanation => green
-    if let Some(label) = line.strip_prefis("- "){
+    if let Some(label) = line.strip_prefix("- "){
         let label = label.trim_end_matches(':');
         println!("{}", label.green());
         return;

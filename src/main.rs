@@ -46,7 +46,8 @@ fn main(){
             cache::save(&command, &content);
             render::print_page(&content);
 
-        }Err(e) => {
+        }
+        Err(e) => {
             eprintln!("Error: could not find page for '{}'\n{}", command, e);
             std::process::exit(1);
         }
